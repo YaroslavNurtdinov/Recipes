@@ -27,7 +27,7 @@
 
             <ImageView
                 android:id="@+id/recipe_ImageView"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:scaleType="centerCrop"
@@ -123,15 +123,14 @@
                 app:layout_constraintStart_toStartOf="@id/leaf_textView"
                 app:layout_constraintTop_toTopOf="@+id/clock_imageView"
                 app:srcCompat="@drawable/ic_leaf"
-                tools:layout_editor_absoluteX="257dp"
-                app:tint="@color/green"/>
+                tools:layout_editor_absoluteX="257dp" />
 
             <TextView
                 android:id="@+id/leaf_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="100"
+                android:text="Vegan"
                 android:textAlignment="center"
                 app:layout_constraintStart_toEndOf="@id/clock_textView"
                 app:layout_constraintTop_toBottomOf="@id/leaf_imageView" />
