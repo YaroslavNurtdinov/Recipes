@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/drawable/ic_heart.xml" value="0.2203125" />
+        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/drawable/ic_sad.xml" value="0.2203125" />
+        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/drawable/ic_star.xml" value="0.2203125" />
         <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/fragment_favorite.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/fragment_favorite_recipes.xml" value="0.25" />
         <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/fragment_food_joke.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/fragment_recipes.xml" value="0.25" />
+        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/fragment_recipes.xml" value="0.33" />
+        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/fragment_recipes_bottom_sheet.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/placeholder_row_layout.xml" value="0.33" />
+        <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/recipes_bottom_sheet.xml" value="0.22" />
         <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/layout/recipes_row_layout.xml" value="0.22" />
         <entry key="..\:/Users/nurtd/AndroidStudioProjects/BonAppetit/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>
