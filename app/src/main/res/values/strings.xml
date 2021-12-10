@@ -32,4 +32,9 @@
     <string name="low_fodmap">Low FODMAP</string>
     <string name="whole30">Whole30</string>
     <string name="apply">Apply</string>
+    <string name="todo">TODO</string>
+    <string name="_100">100</string>
+    <string name="text_view">Text View</string>
+    <string name="search">Search</string>
+
 </resources>
