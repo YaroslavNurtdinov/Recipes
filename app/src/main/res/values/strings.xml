@@ -36,5 +36,9 @@
     <string name="_100">100</string>
     <string name="text_view">Text View</string>
     <string name="search">Search</string>
+    <string name="cheap">Cheap</string>
+    <string name="healthy">Healthy</string>
+    <string name="dairy_free">Dairy Free</string>
+    <string name="title">Title</string>
 
 </resources>
