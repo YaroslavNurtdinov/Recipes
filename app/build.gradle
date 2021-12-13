@@ -93,9 +93,10 @@ dependencies {
     // Jsoup
     implementation 'org.jsoup:jsoup:1.13.1'
 
-
-
     // Jsoup
     implementation 'org.jsoup:jsoup:1.13.1'
+
+    // View Binding Property Delegate
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.2'
 
 }

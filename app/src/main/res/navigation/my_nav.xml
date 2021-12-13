@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.example.nurtdinov.ui.fragments.recipes.RecipesFragment"
+        android:name="com.example.nurtdinov.ui.main.fragments.recipes.RecipesFragment"
         android:label="Recipes"
         tools:layout="@layout/fragment_recipes" >
         <action
@@ -23,17 +23,17 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteRecipesFragment"
-        android:name="com.example.nurtdinov.ui.fragments.favorites.FavoriteRecipesFragment"
+        android:name="com.example.nurtdinov.ui.main.fragments.favorites.FavoriteRecipesFragment"
         android:label="Favorite"
         tools:layout="@layout/fragment_favorite_recipes" />
     <fragment
         android:id="@+id/foodJokeFragment"
-        android:name="com.example.nurtdinov.ui.fragments.foodjoke.FoodJokeFragment"
+        android:name="com.example.nurtdinov.ui.main.fragments.foodjoke.FoodJokeFragment"
         android:label="Joke"
         tools:layout="@layout/fragment_food_joke" />
     <dialog
         android:id="@+id/recipesBottomSheet"
-        android:name="com.example.nurtdinov.ui.fragments.recipes.bottomsheet.RecipesBottomSheet"
+        android:name="com.example.nurtdinov.ui.main.fragments.recipes.bottomsheet.RecipesBottomSheet"
         android:label="recipes_bottom_sheet"
         tools:layout="@layout/recipes_bottom_sheet" >
         <action
@@ -42,7 +42,7 @@
     </dialog>
     <activity
         android:id="@+id/detailsActivity"
-        android:name="com.example.nurtdinov.ui.DetailsActivity"
+        android:name="com.example.nurtdinov.ui.details.DetailsActivity"
         android:label="Details"
         tools:layout="@layout/activity_details" >
         <argument

@@ -1,9 +1,7 @@
 package com.example.nurtdinov.di
 
 import android.content.Context
-import androidx.room.Dao
 import androidx.room.Room
-import com.example.nurtdinov.data.database.RecipesDao
 import com.example.nurtdinov.data.database.RecipesDatabase
 import com.example.nurtdinov.util.Constants.Companion.DATABASE_NAME
 import dagger.Module

@@ -5,7 +5,6 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.nurtdinov.util.Constants.Companion.PREFERENCES_BACK_ONLINE
-
 import com.example.nurtdinov.util.Constants.Companion.PREFERENCES_DIET_TYPE
 import com.example.nurtdinov.util.Constants.Companion.PREFERENCES_DIET_TYPE_ID
 import com.example.nurtdinov.util.Constants.Companion.PREFERENCES_MEAL_TYPE

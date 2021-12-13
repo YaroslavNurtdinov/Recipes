@@ -1,4 +1,4 @@
-package com.example.nurtdinov.ui.fragments.recipes
+package com.example.nurtdinov.ui.main.fragments.recipes
 
 import android.os.Bundle
 import android.util.Log

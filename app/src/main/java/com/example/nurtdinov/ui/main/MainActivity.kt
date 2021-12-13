@@ -1,4 +1,4 @@
-package com.example.nurtdinov.ui
+package com.example.nurtdinov.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

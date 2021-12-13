@@ -1,7 +1,5 @@
-package com.example.nurtdinov.data
+package com.example.nurtdinov.data.database
 
-import com.example.nurtdinov.data.database.RecipesDao
-import com.example.nurtdinov.data.database.RecipesEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

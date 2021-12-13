@@ -1,4 +1,4 @@
-package com.example.nurtdinov.ui.fragments.overview
+package com.example.nurtdinov.ui.details.overview
 
 
 import android.os.Bundle
@@ -11,6 +11,7 @@ import coil.load
 import com.example.nurtdinov.R
 import com.example.nurtdinov.databinding.FragmentOverviewBinding
 import com.example.nurtdinov.models.Result
+import com.example.nurtdinov.util.Constants.Companion.RECIPES_RESULT_KEY
 import org.jsoup.Jsoup
 
 class OverviewFragment : Fragment() {
@@ -30,7 +31,7 @@ class OverviewFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val args = arguments
-        val myBundle: Result? = args?.getParcelable("recipeBundle")
+        val myBundle: Result? = args?.getParcelable(RECIPES_RESULT_KEY)
 
         binding.apply {
             mainImageView.load(myBundle?.image)

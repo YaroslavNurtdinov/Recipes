@@ -1,4 +1,4 @@
-package com.example.nurtdinov.ui.fragments.foodjoke
+package com.example.nurtdinov.ui.main.fragments.foodjoke
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

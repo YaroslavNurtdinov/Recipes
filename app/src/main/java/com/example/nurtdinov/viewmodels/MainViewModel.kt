@@ -2,7 +2,6 @@ package com.example.nurtdinov.viewmodels
 
 import android.app.Application
 import android.content.Context
-import android.media.MediaCodec
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import androidx.lifecycle.*

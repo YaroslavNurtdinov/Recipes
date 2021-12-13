@@ -1,6 +1,5 @@
-package com.example.nurtdinov.data
+package com.example.nurtdinov.data.network
 
-import com.example.nurtdinov.data.network.FoodRecipesApi
 import com.example.nurtdinov.models.FoodRecipe
 import retrofit2.Response
 import javax.inject.Inject
