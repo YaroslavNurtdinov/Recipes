@@ -14,17 +14,21 @@ import com.example.nurtdinov.data.database.entities.FavoritesEntity
 import com.example.nurtdinov.databinding.FavoriteRecipesRowLayoutBinding
 import com.example.nurtdinov.ui.main.fragments.favorites.FavoriteRecipesFragmentDirections
 import com.example.nurtdinov.util.RecipesDiffUtil
+import com.example.nurtdinov.viewmodels.MainViewModel
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.snackbar.Snackbar
 import org.jsoup.Jsoup
 
 class FavoriteRecipesAdapter(
-    private val requireActivity: FragmentActivity
+    private val requireActivity: FragmentActivity,
+    private val mainViewModel: MainViewModel
 ) : RecyclerView.Adapter<FavoriteRecipesAdapter.MyViewHolder>(),
     ActionMode.Callback {
 
     private var multiSelection = false
 
     private lateinit var mActionMode: ActionMode
+    private lateinit var rootView: View
 
     private var selectedRecipes = arrayListOf<FavoritesEntity>()
     private var myViewHolders = arrayListOf<MyViewHolder>()
@@ -47,7 +51,6 @@ class FavoriteRecipesAdapter(
             parseHtml(favoriteDescriptionTextView, favoriteEntity.result.summary)
             favoriteHeartTextView.text = favoriteEntity.result.aggregateLikes.toString()
             favoriteClockTextView.text = favoriteEntity.result.readyInMinutes.toString()
-
         }
 
         private fun parseHtml(textView: TextView, description: String?) {
@@ -67,6 +70,7 @@ class FavoriteRecipesAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         myViewHolders.add(holder)
+        rootView = holder.itemView.rootView
 
         val currentRecipe = favoriteRecipe[position]
         holder.bind(currentRecipe)
@@ -150,6 +154,17 @@ class FavoriteRecipesAdapter(
     }
 
     override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
+        if (item?.itemId == R.id.delete_favorite_recipe_menu) {
+            selectedRecipes.forEach {
+                mainViewModel.deleteFavoriteRecipe(it)
+            }
+            if (selectedRecipes.size == 1) {
+                showSnackBar("${selectedRecipes.size} Recipe removed.")
+            }else  showSnackBar("${selectedRecipes.size} Recipes removed.")
+            multiSelection = false
+            selectedRecipes.clear()
+            mode?.finish()
+        }
         return true
     }
 
@@ -173,6 +188,21 @@ class FavoriteRecipesAdapter(
         val diffUtilResult = DiffUtil.calculateDiff(favoriteRecipesDiffUtil)
         favoriteRecipe = newFavoriteRecipes
         diffUtilResult.dispatchUpdatesTo(this)
+    }
+
+    private fun showSnackBar(message: String) {
+        Snackbar.make(
+            rootView,
+            message,
+            Snackbar.LENGTH_SHORT
+        ).setAction("Okay") {}
+            .show()
+    }
+
+    fun clearContextualActionMode(){
+        if (this::mActionMode.isInitialized){
+            mActionMode.finish()
+        }
     }
 }
 
