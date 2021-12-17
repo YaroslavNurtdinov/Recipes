@@ -46,7 +46,6 @@ class FavoriteRecipesFragment : Fragment() {
         mainViewModel.readFavoriteRecipe.observe(viewLifecycleOwner, { favoriteEntity ->
             mAdapter.setData(favoriteEntity)
         })
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

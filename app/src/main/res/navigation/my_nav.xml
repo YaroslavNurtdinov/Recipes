@@ -33,7 +33,7 @@
     <fragment
         android:id="@+id/foodJokeFragment"
         android:name="com.example.nurtdinov.ui.main.fragments.foodjoke.FoodJokeFragment"
-        android:label="Joke"
+        android:label="Food Joke"
         tools:layout="@layout/fragment_food_joke" />
     <dialog
         android:id="@+id/recipesBottomSheet"

@@ -15,7 +15,34 @@ class NetworkListener : ConnectivityManager.NetworkCallback() {
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         connectivityManager.registerDefaultNetworkCallback(this)
 
-        var isConnected = false
+        val network = connectivityManager.activeNetwork
+        if(network == null){
+            isNetworkAvailable.value = false
+            return  isNetworkAvailable
+        }
+
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(network)
+        if(networkCapabilities == null){
+            isNetworkAvailable.value = false
+            return isNetworkAvailable
+        }
+
+        return  when {
+            networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
+                isNetworkAvailable.value = true
+                isNetworkAvailable
+            }
+            networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {
+                isNetworkAvailable.value = true
+                isNetworkAvailable
+            }
+            else ->{
+                isNetworkAvailable.value = false
+                isNetworkAvailable
+            }
+        }
+
+/*        var isConnected = false
 
         val activeNetwork = connectivityManager.activeNetwork
         val networkCapabilities = connectivityManager.getNetworkCapabilities(activeNetwork)
@@ -28,7 +55,7 @@ class NetworkListener : ConnectivityManager.NetworkCallback() {
 
         isNetworkAvailable.value = isConnected
 
-        return isNetworkAvailable
+        return isNetworkAvailable*/
     }
 
     override fun onAvailable(network: Network) {
