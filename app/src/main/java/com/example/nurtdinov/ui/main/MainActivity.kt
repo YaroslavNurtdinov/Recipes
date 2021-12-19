@@ -1,4 +1,4 @@
-package com.example.nurtdinov.ui.main
+package com.example.nurtdinov.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,17 +14,19 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
-    private val mBinding get() = _binding!!
+    private val binding get() = _binding!!
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mBinding.root)
 
-            val navHostFragment = supportFragmentManager
-                .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-            navController = navHostFragment.navController
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setTheme(R.style.AppTheme)
+        setContentView(binding.root)
+
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        mBinding.bottomNavBar.setupWithNavController(navController)
+        binding.bottomNavBar.setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
     }
